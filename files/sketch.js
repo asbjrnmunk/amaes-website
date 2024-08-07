@@ -23,7 +23,7 @@ function setup() {
   overlayGraphics = createGraphics(windowWidth, windowHeight);
 
   // Draw the overlay on the graphics buffer
-  overlayGraphics.fill(256, 256, 256, 200); // Semi-transparent black
+  overlayGraphics.fill(256, 256, 256, 230); // Semi-transparent black
   overlayGraphics.noStroke();
   overlayGraphics.rect(0, 0, windowWidth, windowHeight);
 
@@ -74,7 +74,7 @@ function setup() {
 let drawCount = 0;
 
 function draw() {
-  col = 235 + max(0, 170 - drawCount);
+  col = 150 + max(0, 170 - drawCount);
   drawCount++;
 
   console.log(col);
