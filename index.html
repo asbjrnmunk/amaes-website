@@ -17,15 +17,17 @@
 
     <object type="text/html" data="header-vars.html"></object>
     <title>AMAES: Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native Segmentation</title>
-    <meta property="og:site_name" content="INSERT TITLE" />
-    <meta property="og:title" content="INSERT TITLE" />
+    <meta property="og:site_name"
+        content="AMAES: Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native Segmentation" />
+    <meta property="og:title"
+        content="AMAES: Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native Segmentation" />
     <meta property="og:description" content="INSERT DESCRIPTION" />
     <meta property="og:url" content="INSERT LINK" />
     <meta property="og:image" content="INSERT PREVIEW IMAGE" />
 
-    <meta property="article:publisher" content="https://apartresearch.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="INSERT TITLE" />
+    <meta name="twitter:title"
+        content="AMAES: Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native Segmentation" />
     <meta name="twitter:description" content="INSERT DESCRIPTION" />
     <meta name="twitter:url" content="INSERT LINK" />
     <meta name="twitter:image" content="INSERT PREVIEW IMAGE" />
@@ -40,96 +42,127 @@
         rel="stylesheet">
 </head>
 
-<div>
-    <template shadowrootmode="open">
-        <div id="plasmo-shadow-container" style="z-index: 1; position: absolute">
-            <div id="plasmo-mount-container" style="display: flex; position: relative; top: 0px; left: 0px"></div>
-        </div>
-    </template>
-</div>
-
 <body cz-shortcut-listen="true">
-    <div class="container banner-container">
-        <div style="padding: 50px 0 0 0">
+    <div class="container" style="margin-bottom: 60px;">
+        <div class="mt-5">
             <h1 class="text-center">
                 <strong>AMAES:</strong> Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native
                 Segmentation
             </h1>
             <br />
-            <div class="text-center">
-                <img src="images/abstract.png" alt="Main image" width="100%" />
+            <div class="container mb-4">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 mb-1 text-center">
+                        <div class="team-member">
+                            <img src="images/asbjørn.jpeg" alt="Asbjørn Munk">
+                            <h5><a href="https://asbn.dk">Asbjørn Munk</a>*</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 mb-1 text-center">
+                        <div class="team-member">
+                            <img src="images/jakob.jpeg" alt="Jakob Ambsdorf">
+                            <h5><a href="https://scholar.google.de/citations?user=Cj2NnUIAAAAJ&hl=en">Jakob
+                                    Ambsdorf</a>*</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 mb-1 text-center">
+                        <div class="team-member">
+                            <img src="images/sebastian.jpeg" alt="Sebastian Llambias">
+                            <h5><a href="https://scholar.google.com/citations?user=axb26RQAAAAJ&hl=en">Sebastian
+                                    Llambias</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 mb-1 text-center">
+                        <div class="team-member">
+                            <img src="images/mads.jpeg" alt="Mads Nielsen">
+                            <h5><a href="https://scholar.google.de/citations?user=2QCJXEkAAAAJ&hl=en">Mads Nielsen</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 text-center">
+                        <h6 class="text-center">* Equal Contribution</h6>
+                    </div>
+                </div>
+                <div class=" row">
+                    <div class="col-xs-12 col-sm-12 text-center">
+                        <h4 class="text-center"><a href="https://aicentre.dk">Pioneer Centre for AI</a> & <a
+                                href="https://www.ku.dk/english/"> University of Copenhagen</a></h4>
+                    </div>
+                </div>
             </div>
-            <br />
-            <div class="buttons" style="margin-bottom: 8px; text-align: center">
-                <a class="btn btn-primary" role="button" href="https://github.com/apartresearch/paper-website"
-                    target="”_blank”">
-                    <svg style="
+        </div>
+        <div class="text-center my-4">
+            <img src="images/abstract.png" alt="Main image" width="100%" />
+            <div class="row captioned_img">
+                <div class="col-md-12">
+                    <br />
+                    <div class="caption">
+                        <strong>AMAES:</strong> <em>Efficient</em> pretraining for 3D segmentation models using MAE and
+                        augmentation reversal on a large domain-specific dataset.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="buttons" style="margin-bottom: 8px; text-align: center">
+            <a class="btn btn-primary" role="button" href="https://arxiv.org/abs/2408.00640v1#" target="”_blank”">
+                <svg style="
                 width: 24px;
                 height: 24px;
                 margin-left: -12px;
                 margin-right: 12px;
               " viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z">
-                        </path>
-                    </svg>Paper
-                </a>
-                <a class="btn btn-primary" role="button" href="https://github.com/apartresearch/paper-website"
-                    target="”_blank”">
-                    <svg style="
+                    <path fill="currentColor"
+                        d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z">
+                    </path>
+                </svg>Paper
+            </a>
+            <a class="btn btn-primary" role="button" href="https://github.com/asbjrnmunk/amaes" target="”_blank”">
+                <svg style="
                 width: 24px;
                 height: 24px;
                 margin-left: -12px;
                 margin-right: 12px;
               " width="24px" height="24px" class="svg-inline--fa fa-github fa-w-16" aria-hidden="true"
-                        focusable="false" data-prefix="fab" data-icon="github" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg="">
-                        <path fill="currentColor"
-                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                        </path>
-                    </svg>Code
-                </a>
-                <a class="btn btn-primary" role="button" target="_blank"
-                    href="https://github.com/apartresearch/paper-website">
-                    <svg style="
-                width: 24px;
-                height: 24px;
-                margin-left: -12px;
-                margin-right: 12px;
-              " width="24px" height="24px" viewBox="0 0 375 531">
-                        <polygon fill="currentColor" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
-                    </svg>
-                    🧠BRAINS-45K dataset
-                </a>
-            </div>
+                    focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 496 512" data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                    </path>
+                </svg>Code
+            </a>
+            <a class="btn btn-primary" role="button" target="_blank" href="https://github.com/asbjrnmunk/amaes">
+                <svg style="width: 24px; height: 24px; margin-left: -12px; margin-right: 12px;" width="24px"
+                    height="24px" class="svg-inline--fa fa-box-seam fa-w-16" aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="box-seam" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16" data-fa-i2svg="">
+                    <path fill="currentColor" stroke="currentColor" stroke-width="0.5"
+                        d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z">
+                    </path>
+                </svg> 🧠BRAINS-45K dataset
+            </a>
         </div>
     </div>
+    </div>
     <div class="outer-container">
-        <div class="container main-container">
-            <div class="row">
-                <div class="col-md-12" style="text-align: center">
-                    <em>
-                        <p>Write a short problem statement.</p>
-                    </em>
-                </div>
-            </div>
-            <br />
-
+        <div class="container main-container mt-4">
             <!-- SECTION ---------------------------------------------------------------------- -->
             <h1>Abstract</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <p>
-                        This study investigates the impact of self-supervised pre- training of 3D semantic segmentation
-                        models on a large-scale, domain- specific dataset. We introduce 🧠BRAINS-45K, a dataset of
-                        44,756
-                        brain MRI volumes from public sources, the largest public dataset available, and revisit a
-                        number of design choices for pretraining modern segmentation architectures by simplifying and
+                    <p class="text-justify">
+                        This study investigates the impact of self-supervised pretraining of 3D semantic segmentation
+                        models on a large-scale, domain-specific dataset. We introduce <span
+                            class="text-nowrap">🧠BRAINS-45K</span>, a dataset of
+                        44,756 brain MRI volumes from public sources, the largest public dataset available, and revisit
+                        a number of design choices for pretraining modern segmentation architectures by simplifying and
                         optimizing state-of-the-art methods, and combining them with a novel augmentation strategy.
                         The resulting AMAES framework is based on masked-image-modeling and intensity-based
                         augmentation reversal and balances memory usage, runtime, and finetuning performance. Using the
                         popular U-Net and the recent MedNeXt architecture as backbones, we evaluate the effect of
-                        pretraining on three challenging downstream tasks, covering single-sequence, low- resource
+                        pretraining on three challenging downstream tasks, covering single-sequence, low-resource
                         settings, and out-of-domain generalization. The results highlight that pretraining on the
                         proposed dataset with AMAES significantly improves segmentation performance in the majority of
                         evaluated cases, and that it is beneficial to pretrain the model with augmentations, despite
@@ -137,40 +170,75 @@
                     </p>
                 </div>
             </div>
+            <hr class="divider" />
+
+            <!-- SECTION ---------------------------------------------------------------------- -->
+            <h1>Method</h1>
+
+            <div class="row">
+                <div class="col-md-12 text-justify">
+                    <p>
+                        During pretraining, spatial and intensity-based augmentations
+                        are applied to an image patch. The patch is masked and passed through the model, which consists
+                        of a backbone encoder and a lightweight decoder, to reconstruct the image. The reconstruction
+                        target is the unmasked image, with only spatial transformations applied. During finetuning, only
+                        spatial augmentations are applied to the input. The backbone encoder weights are transferred,
+                        while a new U-Net decoder is initialized. Skip connections are only used during finetuning.
+                    </p>
+                </div>
+            </div>
             <div class="row captioned_img">
                 <div class="col-md-12">
                     <br />
-                    <img src="https://via.placeholder.com/800x400" alt="Abstract image" width="100%" />
+                    <img src="images/results-no_arrow.png" alt="Results Recap" width="100%" />
                     <div class="caption">
-                        Write figure caption: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc
-                        nisl aliquet nunc, nec aliquam nisl nunc vitae nisl.
+                        AMAES provides <em>efficient</em> 3D pretraining for segmentation networks requiring less
+                        resources than SwinUNETR while improving on downstream performance. Downstream performance is on
+                        the BraTS21 dataset, see Section 5. The MedNeXt model is MedNeXt L (55 mio. parameters), the
+                        U-Net is U-Net XL (90 mio. parameters). SwinUNETR has 60 mio. parameters. Memory usage is
+                        recorded with a batch size of two for all models. All results were obtained using Nvidia H100
+                        GPUs and with mixed 16-bit precision using uncompiled models.
                     </div>
                 </div>
             </div>
             <hr class="divider" />
 
             <!-- SECTION ---------------------------------------------------------------------- -->
-            <h1>Methods section</h1>
-
+            <h1>🧠BRAINS-45K</h1>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-justify">
                     <p>
-                        Write methods text: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc
-                        nisl aliquet nunc, nec aliquam nisl nunc vitae nisl. Nulla
-                        facilisi.
-                    </p>
-                    <p>
-                        More methods text: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc
-                        nisl aliquet nunc, nec aliquam nisl nunc vitae nisl. Nulla
-                        facilisi.
-                        <a href="https://apartresearch.com">A link to somewhere</a>!
+                        We propose BRAINS-45K a dataset of 44.756 Brain MRI volumes collected from public sources,
+                        featuring a diverse set of acquisition parameters and patient populations. The dataset is a
+                        compilation of data from four large non-labelled datasets (ADNI, OASIS3, OASIS4,
+                        PPMI) and five challenge datasets (MSD, BraTS21, ISLES22, WMH, MSSEG1). The resulting dataset is
+                        highly heterogeneous and assembled to simulate the characteristics of clinical data. Overview of
+                        the dataset can be found in Table 1. The dataset includes data acquired at both 1.5T and 3T.
+                        PPMI data is openly available from PPMI. ADNI data used in preparation of this article were
+                        obtained from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) database. To compile the
+                        diverse data into a suitable pretraining dataset, we transformed all volumes to the RAS
+                        coordinates system, resampled to isotropic 1mm spacing, clipped values to the 99% percentile,
+                        and z-normalized on a volume level. Afterwards, each volume is cropped to the minimum bounding
+                        box of the brain. The preprocessing pipeline is based on the Yucca framework for medical
+                        imaging. Code to reproduce the final version of the dataset is provided in the project
+                        repository. <strong>Usage of the dataset needs to comply with the individual legal requirements
+                            of each source.</strong>
                     </p>
                 </div>
             </div>
-
+            <div class="row captioned_img">
+                <div class="col-md-12">
+                    <br />
+                    <img src="images/brains-45k.png" alt="🧠BRAINS-45K dataset" width="100%" />
+                    <div class="caption">
+                        <strong>The 🧠BRAINS-45K dataset.</strong> The dataset is of high diversity and contains a wide
+                        range of different sequences, combining data acquired at both 1.5T and 3T at multiple spatial
+                        resolutions. All data is preprocessed to 1mm isotropic spacing, and intensities are normalized
+                        to the [0, 1] interval.
+                    </div>
+                </div>
+            </div>
+            <hr class="divider" />
             <!-- Uncomment this to make an interesting table of information -->
             <!-- <div class="row" style="text-align: center">
           <div class="col-md-6">
@@ -192,80 +260,62 @@
             <p class="statlabel">Annotations</p>
           </div>
         </div> -->
-            <hr class="divider" />
 
             <!-- SECTION ---------------------------------------------------------------------- -->
-            <h1>Results section</h1>
+            <h1>Results</h1>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-justify">
                     <p>
-                        Write results text: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc
-                        nisl aliquet nunc, nec aliquam nisl nunc vitae nisl. Nulla
-                        facilisi.
+                        We evaluate AMAES along two dimensions: (i) <em>How does AMAES compare to the pretrained
+                            SwinUNETR?</em>, and (ii) <em>What is the impact of pretraining on downstream
+                            performance?</em>
                     </p>
 
                     <p>
-                        More results text: Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Nulla euismod, nisl eget ultricies aliquam, nunc
-                        nisl aliquet nunc, nec aliquam nisl nunc vitae nisl. Nulla
-                        facilisi.
+                        To evaluate (i), we pretrain SwinUNETR with the exact configuration given in on 🧠BRAINS-45K,
+                        which includes both a contrastive loss, a rotation loss and a reconstruction loss, as well as a
+                        different choice of masking ratio and mask size. To ensure a fair comparison, SwinUNETR is
+                        pretrained for 100 epochs, similar to AMAES, and is pretrained with patch size 1283, instead of
+                        patch size 963 and 90 epochs. To address (ii), we apply AMAES to a set of convolutional
+                        backbones and evaluate the difference between training from scratch and fine- tuning the
+                        pretrained model. The backbone models include a U-Net in two sizes: XL (90M parameters) and B.
+                        The U-Net B is very similar in size to the one used in nnUNet (22M parameters, when trained with
+                        the default setting max vram of 12 GB). Further, we explore using the modernized U-Net
+                        architecture MedNeXt, which uses depth-wise seperable convolution to introduce compound
+                        scaleable medical segmentation models. All MedNeXt models are trained with kernel size 3 and do
+                        not use UpKern. The networks are finetuned and trained from scratch using the same
+                        hyperparameters. Models trained from scratch use the full augmentation pipeline.
                     </p>
                 </div>
             </div>
             <div class="row captioned_img">
                 <div class="col-md-12">
                     <br />
-                    <img src="https://via.placeholder.com/800x400" alt="Pareto" width="100%" />
+                    <img src="images/results.png" alt="Results" width="100%" />
                     <div class="caption">
-                        Caption text: Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Nulla euismod, nisl eget ultricies aliquam, nunc nisl
-                        aliquet nunc, nec aliquam nisl nunc vitae nisl.
+                        <strong>Finetuning Results.</strong> We evaluate AMAES on three datasets. The numbers in <span
+                            style="color: red;">red</span>/<span style="color: green;">green</span> denote benefit
+                        from pretraining. The results are Dice scores, averaged over <em>6</em> folds. All models are
+                        trained on
+                        <em>n = 20</em> samples.
                     </div>
                 </div>
             </div>
             <hr class="divider" />
 
             <!-- SECTION ---------------------------------------------------------------------- -->
-            <h1>Authors</h1>
-            <br />
-            <div class="row authors">
-                <div class="col-sm-3">
-                    <h5 class="text-center">
-                        <a class="text-center" href="https://github.com/apartresearch/paper-website">Esben Kran*</a>
-                    </h5>
-                    <div class="text-center">Apart Research</div>
-                </div>
-                <div class="col-sm-3">
-                    <h5 class="text-center">
-                        <a class="text-center" href="https://github.com/apartresearch/paper-website">Author 2</a>
-                    </h5>
-                    <div class="text-center">Apart Research</div>
-                </div>
-            </div>
-            <div class="row authors">
-                <div class="col-sm-3">
-                    <h5 class="text-center">
-                        <a class="text-center" href="https://github.com/apartresearch/paper-website">New row author</a>
-                    </h5>
-                    <div class="text-center">Apart Research</div>
-                </div>
-            </div>
-            <hr class="divider" />
-            <br />
-
-            <!-- SECTION ---------------------------------------------------------------------- -->
             <h1>Citation</h1>
             <br />
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-nowrap">
                     <code>
-              @article{cite2023paper,<br />
-              &nbsp; author = {authors...},<br />
-              &nbsp; title = {full paper title...},<br />
-              &nbsp; journal = {journal name...},<br />
-              &nbsp; year = {2023},<br />
-              }</code>
+                        @article{munk2024amaes, <br/>
+                            &nbsp; title={AMAES: Augmented Masked Autoencoder Pretraining on Public Brain MRI Data for 3D-Native Segmentation}, <br/>
+                            &nbsp; author={Munk, Asbjørn and Ambsdorf, Jakob and Llambias, Sebastian and Nielsen, Mads}, <br/>
+                            &nbsp; journal={arXiv preprint arXiv:2408.00640}, <br/>
+                            &nbsp; year={2024} <br/>
+                          }
+              </code>
                 </div>
             </div>
         </div>
@@ -273,24 +323,11 @@
     <script src="files/scripts.js"></script>
     <script src="files/jquery.min.js"></script>
     <script src="files/bootstrap.bundle.min.js"></script>
-    <!-- Import the component -->
 
     <main>
         <canvas id="defaultCanvas0" class="p5Canvas" width="4112" height="2424"
             style="width: 2056px; height: 1212px"></canvas>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        // Assume markdownContent contains your Markdown text
-        let markdownContent = document.getElementById("content").innerText;
-
-        // Use marked library to convert Markdown to HTML
-        let htmlContent = marked(markdownContent);
-
-        // Replace the content of the element with id "content" with HTML
-        document.getElementById("content").innerHTML = htmlContent;
-    </script>
 </body>
 
 </html>
