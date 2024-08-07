@@ -276,7 +276,10 @@
                         which includes both a contrastive loss, a rotation loss and a reconstruction loss, as well as a
                         different choice of masking ratio and mask size. To ensure a fair comparison, SwinUNETR is
                         pretrained for 100 epochs, similar to AMAES, and is pretrained with patch size 1283, instead of
-                        patch size 963 and 90 epochs. To address (ii), we apply AMAES to a set of convolutional
+                        patch size 963 and 90 epochs.
+                    </p>
+                    <p>
+                        To address (ii), we apply AMAES to a set of convolutional
                         backbones and evaluate the difference between training from scratch and finetuning the
                         pretrained model. The backbone models include a U-Net in two sizes: XL (90M parameters) and B.
                         The U-Net B is very similar in size to the one used in nnUNet (22M parameters, when trained with
@@ -324,9 +327,8 @@
     <script src="files/jquery.min.js"></script>
     <script src="files/bootstrap.bundle.min.js"></script>
 
-    <main>
-        <canvas id="defaultCanvas0" class="p5Canvas" width="4112" height="2424"
-            style="width: 2056px; height: 1212px"></canvas>
+    <main style="overflow: hidden;">
+        <canvas id="defaultCanvas0" class="p5Canvas"></canvas>
     </main>
 </body>
 
