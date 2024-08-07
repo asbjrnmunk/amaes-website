@@ -176,6 +176,48 @@
             <hr class="divider" />
 
             <!-- SECTION ---------------------------------------------------------------------- -->
+            <h1>🧠BRAINS-45K</h1>
+            <div class="row">
+                <div class="col-md-12 text-justify">
+                    <p>
+                        We propose BRAINS-45K a dataset of 44.756 Brain MRI volumes collected from public sources,
+                        featuring a diverse set of acquisition parameters and patient populations. <strong>
+                            The dataset is the largest public pretraining dataset available.</strong> It is a
+                        compilation of data from four large non-labelled datasets (ADNI, OASIS3, OASIS4,
+                        PPMI) and five challenge datasets (MSD, BraTS21, ISLES22, WMH, MSSEG1). The resulting dataset is
+                        highly heterogeneous and assembled to simulate the characteristics of clinical data. Overview of
+                        the dataset can be found in the table below. The dataset includes data acquired at both 1.5T and
+                        3T.
+                    </p>
+                    <p>
+                        <strong>Preprocessing.</strong> To compile the diverse data into a suitable pretraining dataset,
+                        we transformed all volumes to the RAS coordinates system, resampled to isotropic 1mm spacing,
+                        clipped values to the 99% percentile, and z-normalized on a volume level. Afterwards, each
+                        volume is cropped to the minimum bounding box of the brain. The preprocessing pipeline is based
+                        on the <a href="https://github.com/Sllambias/yucca">Yucca framework for medical imaging</a>.
+                        Code to reproduce the final version of the dataset can be found <a
+                            href="https://github.com/asbjrnmunk/amaes">here</a>.
+                        <strong>Usage of the dataset needs to comply with the individual legal requirements of each
+                            source.</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="row captioned_img">
+                <div class="col-md-12">
+                    <br />
+                    <img src="images/brains-45k.png" alt="🧠BRAINS-45K dataset" width="100%" />
+                    <div class="caption">
+                        <strong>Table 1. The 🧠BRAINS-45K dataset.</strong> The dataset is of high diversity and
+                        contains a wide
+                        range of different sequences, combining data acquired at both 1.5T and 3T at multiple spatial
+                        resolutions. All data is preprocessed to 1mm isotropic spacing, and intensities are normalized
+                        to the [0, 1] interval.
+                    </div>
+                </div>
+            </div>
+            <hr class="divider" />
+
+            <!-- SECTION ---------------------------------------------------------------------- -->
             <h1>Method</h1>
 
             <div class="row">
@@ -206,42 +248,6 @@
             </div>
             <hr class="divider" />
 
-            <!-- SECTION ---------------------------------------------------------------------- -->
-            <h1>🧠BRAINS-45K</h1>
-            <div class="row">
-                <div class="col-md-12 text-justify">
-                    <p>
-                        We propose BRAINS-45K a dataset of 44.756 Brain MRI volumes collected from public sources,
-                        featuring a diverse set of acquisition parameters and patient populations. The dataset is a
-                        compilation of data from four large non-labelled datasets (ADNI, OASIS3, OASIS4,
-                        PPMI) and five challenge datasets (MSD, BraTS21, ISLES22, WMH, MSSEG1). The resulting dataset is
-                        highly heterogeneous and assembled to simulate the characteristics of clinical data. Overview of
-                        the dataset can be found in Table 1. The dataset includes data acquired at both 1.5T and 3T.
-                        PPMI data is openly available from PPMI. ADNI data used in preparation of this article were
-                        obtained from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) database. To compile the
-                        diverse data into a suitable pretraining dataset, we transformed all volumes to the RAS
-                        coordinates system, resampled to isotropic 1mm spacing, clipped values to the 99% percentile,
-                        and z-normalized on a volume level. Afterwards, each volume is cropped to the minimum bounding
-                        box of the brain. The preprocessing pipeline is based on the Yucca framework for medical
-                        imaging. Code to reproduce the final version of the dataset is provided in the project
-                        repository. <strong>Usage of the dataset needs to comply with the individual legal requirements
-                            of each source.</strong>
-                    </p>
-                </div>
-            </div>
-            <div class="row captioned_img">
-                <div class="col-md-12">
-                    <br />
-                    <img src="images/brains-45k.png" alt="🧠BRAINS-45K dataset" width="100%" />
-                    <div class="caption">
-                        <strong>The 🧠BRAINS-45K dataset.</strong> The dataset is of high diversity and contains a wide
-                        range of different sequences, combining data acquired at both 1.5T and 3T at multiple spatial
-                        resolutions. All data is preprocessed to 1mm isotropic spacing, and intensities are normalized
-                        to the [0, 1] interval.
-                    </div>
-                </div>
-            </div>
-            <hr class="divider" />
             <!-- Uncomment this to make an interesting table of information -->
             <!-- <div class="row" style="text-align: center">
           <div class="col-md-6">
@@ -269,8 +275,12 @@
             <div class="row">
                 <div class="col-md-12 text-justify">
                     <p>
-                        We evaluate AMAES along two dimensions: (i) <em>How does AMAES compare to the pretrained
-                            SwinUNETR?</em>, and (ii) <em>What is the impact of pretraining on downstream
+                        We evaluate AMAES in a setup designed to test the capacity of pretrained models by restricting
+                        the amount of training data during finetuning to <em><strong>20 labeled training
+                                examples.</strong></em>
+
+                        The evaluation is then performed along two dimensions: (i) <em>How does AMAES compare to the
+                            pretrained SwinUNETR?</em>, and (ii) <em>What is the impact of pretraining on downstream
                             performance?</em>
                     </p>
 
@@ -278,19 +288,19 @@
                         To evaluate (i), we pretrain SwinUNETR with the exact configuration given in on 🧠BRAINS-45K,
                         which includes both a contrastive loss, a rotation loss and a reconstruction loss, as well as a
                         different choice of masking ratio and mask size. To ensure a fair comparison, SwinUNETR is
-                        pretrained for 100 epochs, similar to AMAES, and is pretrained with patch size 1283, instead of
-                        patch size 963 and 90 epochs.
+                        pretrained for 100 epochs, similar to AMAES, and is pretrained with patch size 128<sup>3</sup>,
+                        instead of patch size 96<sup>3</sup> and 90 epochs.
                     </p>
                     <p>
-                        To address (ii), we apply AMAES to a set of convolutional
-                        backbones and evaluate the difference between training from scratch and finetuning the
-                        pretrained model. The backbone models include a U-Net in two sizes: XL (90M parameters) and B.
-                        The U-Net B is very similar in size to the one used in nnUNet (22M parameters, when trained with
-                        the default setting max vram of 12 GB). Further, we explore using the modernized U-Net
-                        architecture MedNeXt, which uses depth-wise seperable convolution to introduce compound
-                        scaleable medical segmentation models. All MedNeXt models are trained with kernel size 3 and do
-                        not use UpKern. The networks are finetuned and trained from scratch using the same
-                        hyperparameters. Models trained from scratch use the full augmentation pipeline.
+                        To address (ii), we apply AMAES to a set of convolutional backbones and evaluate the difference
+                        between training from scratch and finetuning the pretrained model. The backbone models include a
+                        U-Net in two sizes: XL (90M parameters) and B. The U-Net B is very similar in size to the one
+                        used in nnUNet (22M parameters, when trained with the default setting max vram of 12 GB).
+                        Further, we explore using the modernized U-Net architecture MedNeXt, which uses depth-wise
+                        seperable convolution to introduce compound scaleable medical segmentation models. All MedNeXt
+                        models are trained with kernel size 3 and do not use UpKern. The networks are finetuned and
+                        trained from scratch using the same hyperparameters. Models trained from scratch use the full
+                        augmentation pipeline. Results for both (i) and (ii) are given in Table 2.
                     </p>
                 </div>
             </div>
@@ -299,8 +309,8 @@
                     <br />
                     <img src="images/results.png" alt="Results" width="100%" />
                     <div class="caption">
-                        <strong>Finetuning Results.</strong> We evaluate AMAES on three datasets. The numbers in <span
-                            style="color: red;">red</span>/<span style="color: green;">green</span> denote benefit
+                        <strong>Table 2. Finetuning Results.</strong> We evaluate AMAES on three datasets. The numbers
+                        in <span style="color: red;">red</span>/<span style="color: green;">green</span> denote benefit
                         from pretraining. The results are Dice scores, averaged over <em>6</em> folds. All models are
                         trained on
                         <em>n = 20</em> samples.
